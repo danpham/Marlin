@@ -685,13 +685,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_KP_LIST {  28.43,  28.43 }
-    #define DEFAULT_KI_LIST {   2.53,   2.53 }
-    #define DEFAULT_KD_LIST {  79.77,  79.77 }
+    #define DEFAULT_KP_LIST {  21.73,  21.73 }
+    #define DEFAULT_KI_LIST {   1.54,   1.54 }
+    #define DEFAULT_KD_LIST {  76.55,  76.55 }
   #else
-    #define DEFAULT_KP  28.43
-    #define DEFAULT_KI   2.53
-    #define DEFAULT_KD  79.77
+    #define DEFAULT_KP  21.73
+    #define DEFAULT_KI   1.54
+    #define DEFAULT_KD  76.55
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -770,7 +770,7 @@
  *
  * With this option disabled, bang-bang will be used. BED_LIMIT_SWITCHING enables hysteresis.
  */
-#define PIDTEMPBED
+//#define PIDTEMPBED
 
 #if ENABLED(PIDTEMPBED)
   //#define MIN_BED_POWER 0
@@ -1205,7 +1205,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 20, 120 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
